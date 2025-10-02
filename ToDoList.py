@@ -1,16 +1,13 @@
 #ToDoList
 #Goal - Add, Remove, View and exit program
+#functions
 import ToDoFunctions
+
 #Variables
 toDo = {1:"Create to Do list", 2:"add add function"}
 Running = True
 
-#functions
-
-
-
 #Prgram loop
-
 while Running:
     print("------------------")
     print("----To Do List----")
@@ -23,13 +20,11 @@ while Running:
         case "exit":
             Running = False
         case "view":
-            ToDoFunctions.ToDoView(toDo)
-            
+            ToDoFunctions.ToDoView(toDo)    
         case "add":
             ToDoFunctions.ToDoAdd(toDo)
         case "remove":
-            #Create function to remove items.
-            continue
+            ToDoFunctions.ToDoRm(toDo)
         case _:
             print('Please select a valid input')
 
