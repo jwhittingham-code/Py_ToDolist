@@ -13,8 +13,9 @@ def ToDoAdd(dict):
     tasktoAdd = input("What task would you like to add? ")
     key = len(dict.keys()) + 1
 
-    dict.update({key:tasktoAdd})
-    print(f'task {tasktoAdd} added')
+    if tasktoAdd.lower() != 'back':
+        dict.update({key:tasktoAdd})
+        print(f'task {tasktoAdd} added')
     print("------------------")
 
 def ToDoReorder(dict):
@@ -36,8 +37,9 @@ def ToDoRm(dict):
         tasktoRm = input("Please type the task number: ")
         
         try:
-            dict.pop(int(tasktoRm))
-            ToDoReorder(dict)
+            if tasktoRm.lower() != "back":
+                dict.pop(int(tasktoRm))
+                ToDoReorder(dict)
             tryRm = False
         except:
             print("invalid task entered, try again")

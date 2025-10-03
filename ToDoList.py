@@ -20,6 +20,7 @@ while Running:
     match Menu: 
         case "exit":
             print("Thank you for using this to do list app")
+            print("------------------")
             Running = False
         case "view":
             ToDoFunctions.ToDoView(toDo)    
@@ -28,6 +29,5 @@ while Running:
         case "remove":
             ToDoFunctions.ToDoRm(toDo)
         case _:
-            print("------------------")
             print('Please select a valid input')
-            print("------------------")
+            
