@@ -25,6 +25,7 @@ while Running:
             ToDoFunctions.ToDoAdd(toDo)
         case "remove":
             ToDoFunctions.ToDoRm(toDo)
+           
         case _:
             print('Please select a valid input')
 
