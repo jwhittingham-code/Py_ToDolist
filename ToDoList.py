@@ -8,9 +8,10 @@ toDo = {1:"Create to Do list", 2:"add add function"}
 Running = True
 
 #Prgram loop
+print("------------------")
 while Running:
-    print("------------------")
     print("----To Do List----")
+    print("------ Menu ------")
     print("------------------")
     
     Menu = input("Add,View,Remove or Exit: ")
@@ -18,6 +19,7 @@ while Running:
     
     match Menu: 
         case "exit":
+            print("Thank you for using this to do list app")
             Running = False
         case "view":
             ToDoFunctions.ToDoView(toDo)    
@@ -25,8 +27,7 @@ while Running:
             ToDoFunctions.ToDoAdd(toDo)
         case "remove":
             ToDoFunctions.ToDoRm(toDo)
-           
         case _:
+            print("------------------")
             print('Please select a valid input')
-
-    
+            print("------------------")
